@@ -22,9 +22,9 @@ public class LoginServlet extends HttpServlet {
 	protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    String id = request.getParameter("id");
 	    String pwd = request.getParameter("pwd");
-	    
+	    System.out.printf("id = %s, pwd=%s%n", id, pwd);
 	    request.setAttribute("id", id);
-	    request.setAttribute("pwd", pwd);
+//	    request.setAttribute("pwd", pwd);
 	    
 	    request.getRequestDispatcher("04_testLogin_servlet.jsp").forward(request, response);
     }
